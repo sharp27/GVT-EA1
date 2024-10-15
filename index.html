@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA 1 - Interaktive Animation</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EA 1 - Interaktive Animation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#scheibe">Interaktive Scheibe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rocket">Interaktive Rakete</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#documentationSection">Dokumentation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5" id="mainContent">
+        <!-- Abschnitt für die rotierende Scheibe -->
+        <section id="scheibe" class="mb-4">
+            <h1>Interaktiv animierte Scheibe</h1>
+            <p>
+        In diesem Abschnitt sehen Sie eine zweidimensional animierte Scheibe, die in Schritten von 15 Grad gedreht werden kann. 
+        Die Animation besteht aus 24 Einzelbildern, die die Scheibe in unterschiedlichen Rotationspositionen zeigen.
+    </p>
+    <p>
+        Sie haben verschiedene Möglichkeiten, die Scheibe zu steuern:
+    </p>
+    <ul>
+        <li>Mit der Taste <strong>R</strong> können Sie die Scheibe um 15 Grad im Uhrzeigersinn drehen.</li>
+        <li>Mit der Taste <strong>L</strong> drehen Sie die Scheibe um 15 Grad gegen den Uhrzeigersinn.</li>
+        <li>Mit der Taste <strong>A</strong> starten oder stoppen Sie eine automatische Animation, bei der die Scheibe kontinuierlich rotiert.</li>
+    </ul>
+    <p>
+        Alternativ können Sie die Scheibe auch mit den Schaltflächen unter der Abbildung bedienen, um die Drehrichtung zu ändern oder die automatische Animation zu aktivieren/deaktivieren.
+    </p>
+
+            <div id="container" class="d-flex justify-content-center align-items-center">
+                <img id="image" src="images/frame_0.png" alt="Drehende Scheibe" class="img-fluid">
+            </div>
+
+            <div id="controls" class="text-center mt-3">
+                <button id="leftBtn" class="btn btn-primary">Links drehen (L)</button>
+                <button id="rightBtn" class="btn btn-primary">Rechts drehen (R)</button>
+                <button id="autoBtn" class="btn btn-primary">Automatisch drehen (A)</button>
+            </div>
+        </section>
+
+        <!-- Erweiterter Abschnitt für die Animation mit Sprite-Sheet -->
+        <section id="rocket" class="mb-4">
+            <h1>Animation mit Sprite-Sheet</h1>
+    <p>
+        In diesem Abschnitt wird für die Animation ein sogenanntes Sprite-Sheet verwendet. 
+        Ein Sprite-Sheet ist eine Technik, bei der mehrere Einzelbilder einer Animation in einem einzigen Bild angeordnet werden. 
+        Jedes dieser Einzelbilder zeigt eine leicht veränderte Position des Objekts, sodass durch schnelles Umschalten zwischen den Bildern eine flüssige Bewegung entsteht.
+    </p>
+    <p>
+        Das Sprite-Sheet für diese Animation besteht aus 33 Einzelbildern, die in 3 Spalten und 11 Zeilen organisiert sind. 
+        Jedes Bild zeigt eine andere Phase des Raketenflugs.
+    </p>
+    <p>
+        Sie können die Rakete mit folgenden Tasten steuern:
+    </p>
+    <ul>
+        <li>Mit der Taste <strong>G</strong> fliegt die Rakete vorwärts durch die Animation.</li>
+        <li>Mit der Taste <strong>B</strong> fliegt die Rakete rückwärts.</li>
+        <li>Mit der Taste <strong>X</strong> können Sie den Autopilot ein- oder ausschalten, wodurch die Rakete automatisch vorwärts fliegt.</li>
+    </ul>
+    <p>
+        Alternativ können Sie die Steuerung auch über die Schaltflächen unter der Animation vornehmen.
+    </p>
+
+            <div id="spriteContainer" class="d-flex justify-content-center align-items-center">
+                <div id="sprite"></div>
+            </div>
+
+            <div id="spriteControls" class="text-center mt-3">
+                <button id="spriteLeftBtn" class="btn btn-primary">Rückwärts (B)</button>
+                <button id="spriteRightBtn" class="btn btn-primary">Vorwärts (G)</button>
+                <button id="spriteAutoBtn" class="btn btn-primary">Autopilot (X)</button>
+            </div>
+        </section>
+
+        <section id="documentationSection" class="mb-4">
+    <h2>Dokumentation</h2>
+    <p>
+        Das Bildmaterial für die animierte Scheibe wurde vollständig selbst erstellt. 
+    </p>
+    <p>
+        Für die Raketenanimation wurden die einzelnen Bilder aus verschiedenen Quellen zusammengestellt:
+    </p>
+    <ul>
+        <li>Erde: <a href="https://www.freepik.com/free-ai-image/photorealistic-earth-planet_94075611.htm" target="_blank">https://www.freepik.com/free-ai-image/photorealistic-earth-planet_94075611.htm</a></li>
+        <li>Mond: <a href="https://www.freepik.com/free-photo/beautiful-glowing-gray-full-moon_29302752.htm" target="_blank">https://www.freepik.com/free-photo/beautiful-glowing-gray-full-moon_29302752.htm</a></li>
+        <li>Rakete: <a href="https://www.freepik.com/free-vector/rocket-start-up-launcher_136881055.htm" target="_blank">https://www.freepik.com/free-vector/rocket-start-up-launcher_136881055.htm</a></li>
+        <li>Explosion: <a href="https://www.freepik.com/free-psd/realistic-fire-explosion-isolated_156698728.htm" target="_blank">https://www.freepik.com/free-psd/realistic-fire-explosion-isolated_156698728.htm</a></li>
+    </ul>
+</section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
